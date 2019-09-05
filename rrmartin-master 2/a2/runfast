@@ -1,0 +1,10 @@
+all: fastsort
+
+slowsort: fastsort.c
+          gcc -o fastsort fastsort.c
+
+run: fastsort
+        ./fastsort
+
+clean:
+        rm *.o fastsort *.a

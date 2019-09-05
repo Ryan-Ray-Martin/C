@@ -1,0 +1,14 @@
+Ryan Martin
+CS 5007
+Dr. Slaughter
+1/23/19
+
+Assignment two: Comparing the Runtimes of Insertion Sort and Quicksort
+
+In this assignment, the length of the arrays, or values of n, used for this experiment were as     follows: 10,000 random numbers for the small array, 100,000 random numbers for the medium array,   and 1,000,000 random numbers for the large array. I chose these sizes of the arrays in order to    illustrate the differences in the runtimes between insertion sort and quicksort and the sizes of   the arrays seemed realistic to real world datasets. 
+
+The results of the experiment were not surprising, considering the fact that insertion sort has an average runtime of (n^2), and quicksort has an average runtime of (n log(n)). Consequently, these  different types of sorting algorithms had a drastically different runtime for each size of the given arrays. The runtimes for insertion sort were 0.067 seconds for the small array, 5.57 seconds for the medium array, and a whopping 556.042 seconds for the large array. And the runtimes for         quicksort were 0.0013 for the small array, 0.0148 for the medium array, and 0.5490 for the large   array. As shown by the data, the difference in runtime between quicksort and insertion sort on the large array was about a thousand times faster for quicksort (exactly 1012.8 times faster). The     runtime was exactly 376.35 times faster for quicksort on the medium array, but only 51.53 times    faster for the small array. 
+
+When taking into account the Big-O complexity of these algorithms, these runtime results are not at all surprising. If you were to draw a graph with the array size (or elements)  on the x-axis, and the runtime (or operations) on the y-axis, you would see that as the array gets larger, insertion  sort grows exponentially on the y-axis, and quicksort grows only logarithmically on the y-axis,    which would show quicksort as a much faster algorithm. However, for small datasets, the differences would be nearly nonexistent. In fact, insertion sort is better to use on smaller datasets of about 10 elements in size. My experiment showed that the runtime was .000004 seconds for insertion sort and .000005 seconds for quicksort, which means that for very small datasets insertion sort actually beats quicksort by a non-trivial margin. This is because non-recursive algorithms are more simple to use on small datasets compared to divide-and-conquer algorithms such as quicksort. 
+
+Therefore, in practice the most optimal approach would be to use insertion sort on very small data sets, and quicksort on large datasets. 

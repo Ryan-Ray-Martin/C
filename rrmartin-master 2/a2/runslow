@@ -1,0 +1,10 @@
+all: slowsort
+
+slowsort: slowsort.c
+	  gcc -o slowsort slowsort.c
+
+run: slowsort
+	./slowsort
+
+clean:
+	rm *.o slowsort *.a

@@ -1,0 +1,9 @@
+#builds a makefile from 2 files running different sorting algorithms
+
+all: slowsort fastsort
+
+slowsort: slowsort.c
+	  gcc  -o slowsort slowsort.c
+
+fastsort: fastsort.c
+	  gcc  -o fastsort fastsort.c
